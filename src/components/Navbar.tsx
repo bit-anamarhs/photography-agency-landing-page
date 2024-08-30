@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar flexBetween max-container px-10 relative z-30 py-5 bg-gradient-to-b from-transparent to-transparent lg:static fixed top-0 left-0 right-0">
+    <nav className="flexBetween max-container px-10 py-5 relative top-0 left-0 right-0 z-30 bg-gradient-to-b from-transparent to-transparent">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <img src="/logo.png" alt="CREACY" className="rounded-2xl w-12 h-12" />
@@ -21,12 +21,12 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Links */}
-      <ul className="hidden lg:flex gap-6 items-center rounded-full bg-[#a1a8a8] p-3 px-7">
+      <ul className="hidden lg:flex gap-6 items-center rounded-full bg-[#9e9e9edc] p-3 px-7">
         {NAV_LINKS.map((link, index) => (
           <li key={link.key} className="flex items-center">
             <Link
               href={link.href}
-              className={`regular-16 text-white hover:text-[#1C1A1F] transition-all ${index < NAV_LINKS.length - 1 ? 'pr-5' : ''}`}
+              className="pr-5 text-[#ffffff] hover:text-[#1C1A1F] cursor-pointer"
             >
               {link.label}
             </Link>
