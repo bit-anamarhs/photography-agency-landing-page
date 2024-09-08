@@ -92,7 +92,7 @@ const Navbar = () => {
       {/* BOOK A CALL button */}
       <div className="lg:flex hidden items-center">
         <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
-        <div className="relative w-12 h-12 inline-flex items-center justify-center bg-white hover:bg-[#7f7f81] rounded-full shadow-md cursor-pointer focus:outline-none transform hover:scale-95 active:scale-95">
+        {/* <div className="relative w-12 h-12 inline-flex items-center justify-center bg-white hover:bg-[#7f7f81] rounded-full shadow-md cursor-pointer focus:outline-none transform hover:scale-95 active:scale-95">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -102,7 +102,7 @@ const Navbar = () => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 7l-10 10M17 7H6.5M17 7v10" />
           </svg>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile Menu Button */}
@@ -205,7 +205,7 @@ const Navbar = () => {
 
           <div className="flex flex-col items-center gap-4">
             <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
-            <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
+            {/* <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -220,7 +220,7 @@ const Navbar = () => {
                   d="M17 7l-10 10M17 7H6.5M17 7v10"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       )}

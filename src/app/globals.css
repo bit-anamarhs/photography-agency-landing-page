@@ -312,12 +312,10 @@ body {
   flex: 0 0 auto; 
 }
 
-/* .product-preview {
-  z-index: 50; /* Ensure this is higher than other elements */
 
 .product-preview {
   position: absolute;
-  top: 70%; /* Adjust as necessary */
+  top: 70%; 
   left: 32px;
   width: 28rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
