@@ -20,9 +20,6 @@ export default function Work() {
           </CardDescription>
           <div className="buttons flex flex-row">
             <button className="text-white capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080]">Explore More</button>
-            <button className="bg-white rounded-[20px] w-10 h-10 flex flex-row items-center justify-center rotate-[-45deg]">
-              <MdArrowForward size={24} color="#000000" />
-            </button>
           </div>
         </div>
       </div>
@@ -30,7 +27,7 @@ export default function Work() {
       {/* Card Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* First Card */}
-        <Card variant="large" className="relative overflow-hidden rounded-2xl">
+        <Card variant="large" className="relative overflow-hidden rounded-2xl transform transition-transform duration-300 hover:scale-105">
           <img
             src={WorkCards[0].image}
             alt={WorkCards[0].title}
@@ -58,7 +55,7 @@ export default function Work() {
 
         {/* Other Cards */}
         {WorkCards.slice(1).map((card, index) => (
-          <Card key={index} variant="medium" className="relative overflow-hidden rounded-2xl">
+          <Card key={index} variant="medium" className="relative overflow-hidden rounded-2xl transform transition-transform duration-300 hover:scale-105">
             <img
               src={card.image}
               alt={card.title}
