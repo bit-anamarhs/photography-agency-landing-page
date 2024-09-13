@@ -65,7 +65,6 @@ export default function Work() {
             />
             <CardOverlay>
               <CardHeader>
-                {/* Render Tags for the Other Cards */}
                 {card.tags && (
                   <div className="absolute top-2 pl-8 right-2 mt-2 flex gap-2 flex-wrap justify-end cursor-pointer">
                     {card.tags.map((tag, i) => (

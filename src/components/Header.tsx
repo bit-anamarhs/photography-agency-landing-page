@@ -12,7 +12,7 @@ const Header = () => {
           shutterspeed
         </h1>
         <div className="flex flex-col w-full sm:w-auto mt-10 sm:mt-16 md:mt-24 lg:mt-30 xlg:mt-10">
-          {/* First Row of Buttons */}
+        
           <div className="flex flex-wrap gap-2 sm:gap-3">
             <HeaderButton
               type="button"
@@ -26,7 +26,6 @@ const Header = () => {
             />
           </div>
 
-          {/* Second Row of Buttons */}
           <div className="flex flex-wrap gap-2 sm:gap-3 mt-2 sm:mt-3">
             <HeaderButton
               type="button"

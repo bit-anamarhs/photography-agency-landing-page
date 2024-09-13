@@ -80,7 +80,6 @@ const DropdownForm = () => {
       console.error('Error:', error);
     });
 
-    // Clear form
     setFormData({
       firstName: '',
       lastName: '',

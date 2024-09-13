@@ -42,7 +42,7 @@ const Navbar = () => {
             >
               {link.label}
             </Link>
-            {/* Divider between links */}
+
             {index < NAV_LINKS.length - 1 && (
               <div className="w-[1px] h-6 bg-[#d1d0d0] mx-2"></div>
             )}
@@ -50,12 +50,10 @@ const Navbar = () => {
         ))}
       </ul>
 
-      {/* BOOK A CALL button */}
       <div className="lg:flex hidden items-center ml-11">
         <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
       </div>
 
-      {/* Mobile Menu Button */}
       <div className="lg:hidden flex items-center">
         <button
           className="text-white focus:outline-none"
@@ -95,7 +93,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Links */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-gray-500 flex flex-col py-5 px-4">
           <button
@@ -118,7 +115,7 @@ const Navbar = () => {
             </svg>
           </button>
 
-          {/* Book a Call Button */}
+  
           <div className="flex justify-start px-4 mb-4">
             <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
           </div>

@@ -8,7 +8,7 @@ const About = () => {
     <>
      <div className="py-16 ">
         <div className="flex md:flex-row flex-col md:justify-center  md:align-middle align-top text-[#d0d0d0]">
-          {/* left box start  */}
+         
           <div className="left-box md:w-1/2 w-full">
             <div className=" text-left md:h-32 h-20 md:mt-10 mt-2">
               <p className="text-[#808080]">(01)</p>
@@ -20,7 +20,7 @@ const About = () => {
               The Timeless Essence Of The Human Experience.
             </div>
           </div>
-          {/* right box start  */}
+         
           <div className="right-box md:w-1/2 w-full">
             <article className=" text-left text-[40px] mt-10  mb-5 leading-snug text-[#808080]">
               <span className="text-[#e7e7e7]">Photography</span> is driven by a deep passion for <span className="text-[#e7e7e7]"> capturing life's </span> most

@@ -44,8 +44,6 @@ const HeaderCard = () => {
       const images = carouselElement.querySelectorAll("img");
       images.forEach((img) => img.addEventListener("load", handleImageLoad));
     }
-
-    // Initial scroll calculation
     handleScroll();
 
     return () => {
@@ -58,14 +56,13 @@ const HeaderCard = () => {
 
   return (
     <>
-      {/* Highlight section */}
       <div className="flex items-center justify-between w-full relative mb-4">
         <span className="text-sm font-medium text-white">
           {String(currentItemIndex + 1).padStart(2, '0')}
         </span>
         <div className="relative flex-1 mx-4">
           <hr className="absolute inset-0 border-t-2 border-gray-400" />
-          {/* Highlight bar */}
+
           <div
             className="absolute bg-white h-[2px] rounded-full transition-all duration-300"
             style={{ width: `${scrollProgress}%` }}
@@ -76,19 +73,18 @@ const HeaderCard = () => {
         </span>
       </div>
 
-      {/* Carousel */}
       <Carousel opts={{ align: "start" }} className="w-full max-w-[250px] md:max-w-[350px] h-44">
         <CarouselContent ref={carouselRef} className="carousel-container flex space-x-2">
           {carouselData.map((item, index) => (
             <CarouselItem key={index} className="w-[250px] md:w-[350px] flex-shrink-0 carousel-item">
               <div className="flex flex-col md:flex-row p-2 rounded-md h-32 btn_white cursor-pointer">
-                {/* Image on the left side */}
+  
                 <div className="flex-shrink-0">
                   <img
                     src={item.imgSrc}
                     alt={`Image ${index + 1}: ${item.title}`}
                     className="aspect-square w-[98px] h-[98px] rounded-lg object-cover"
-                    loading="lazy" // Lazy load the images
+                    loading="lazy"
                   />
                 </div>
 
