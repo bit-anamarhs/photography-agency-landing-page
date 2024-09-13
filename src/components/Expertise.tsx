@@ -17,7 +17,7 @@ const Expertise = () => {
     "https://images.unsplash.com/photo-1541414779316-956a5084c0d4?q=80&w=1614&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8fHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8fHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
   return (
@@ -35,7 +35,8 @@ const Expertise = () => {
               <p>(02)</p>
               <p>Our Expertise</p>
               <div className="text-2xl md:text-3xl md:w-[40%] w-full mt-2">
-                When moments captured every dreams crafted into beautiful reality
+                When moments captured every dreams crafted into beautiful
+                reality
               </div>
             </div>
 
@@ -49,7 +50,9 @@ const Expertise = () => {
                 <p className="text-xl md:text-2xl">
                   Chasing Clouds at Mont Blanc's Pinnacle.
                 </p>
-                <p className="address text-sm md:text-base text-[#9c9c9c]">Mont Blanc, France</p>
+                <p className="address text-sm md:text-base text-[#9c9c9c]">
+                  Mont Blanc, France
+                </p>
               </div>
             </div>
             <div className="md:col-span-3 col-span-4 md:mt-4 mt-8">
@@ -64,10 +67,10 @@ const Expertise = () => {
                     {images.map((data, index) => (
                       <CarouselItem
                         key={index}
-                        className="flex justify-center items-center"
+                        className="flex justify-center items-center mt-10"
                       >
                         <div className="p-0">
-                          <Card className="w-[700px] h-[700px] mx-1">
+                          <Card className="w-[90%] h-[46vw] mx-1 ms-14">
                             <CardContent className="flex items-center justify-center p-0">
                               <img
                                 src={data}
@@ -80,8 +83,8 @@ const Expertise = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full" />
-                  <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-2 rounded-full" />
+                  <CarouselPrevious className="relative transform -translate-y-1/2 translate-x-14 h-10 w-10 text-white bg-gray-700 p-2 rounded-full" />
+                  <CarouselNext className="relative transform -translate-y-1/2 translate-x-10 h-10 w-10 text-white bg-gray-700 p-2 rounded-full" />
                 </Carousel>
               </div>
             </div>

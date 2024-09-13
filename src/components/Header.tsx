@@ -47,9 +47,9 @@ const Header = () => {
         </div>
       </div>
 
-      {/* <div className="mt-80">
+      <div className="mt-80 hidden xl:block">
         <HeaderCard />
-      </div> */}
+      </div>
     </section>
   );
 };

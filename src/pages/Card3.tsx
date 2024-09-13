@@ -1,7 +1,7 @@
-import Card3 from "@/components/MoreDetails/Card3";
+import { Card3 } from "@/components/MoreDetails/Cards";
 
 const Card3Page = () => {
-    return <Card3 />;
-  };
-  
-  export default Card3Page;
+  return <Card3 />;
+};
+
+export default Card3Page;

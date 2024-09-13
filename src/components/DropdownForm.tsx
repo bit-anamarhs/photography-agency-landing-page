@@ -3,9 +3,8 @@ import  { useState } from 'react';
 const DropdownForm = () => {
   // State to hold form data
   const [formData, setFormData] = useState({
-    // firstName: '',
-    // lastName: '',
-    username: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phoneNumber: '',
     date: '',
@@ -20,16 +19,17 @@ const DropdownForm = () => {
   });
 
   // Handle input changes
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     const { id, value } = e.target;
     setFormData(prevData => ({
       ...prevData,
       [id]: value
     }));
+    console.log("FormData: ", e.target);
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     // Simple validation
@@ -46,7 +46,7 @@ const DropdownForm = () => {
     }
 
     // Phone validation
-    if (!/\(\d{3}\) \d{3}-\d{4}/.test(formData.phoneNumber)) {
+    if (!/\d{3}\d{3}\d{4}/.test(formData.phoneNumber)) {
       newErrors.phoneNumber = 'Please enter a valid phone number.';
       hasErrors = true;
     }
@@ -61,9 +61,8 @@ const DropdownForm = () => {
 
     // Clear form
     setFormData({
-      // firstName: '',
-      // lastName: '',
-      username: '',
+      firstName: '',
+      lastName: '',
       email: '',
       phoneNumber: '',
       date: '',
@@ -86,9 +85,9 @@ const DropdownForm = () => {
           <input
             type="text"
             id="firstName"
-            value={formData.username}
+            value={formData.firstName}
             onChange={handleInputChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="First Name"
             required
           />
@@ -100,9 +99,9 @@ const DropdownForm = () => {
           <input
             type="text"
             id="lastName"
-            value={formData.username}
+            value={formData.lastName}
             onChange={handleInputChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="Last Name"
             required
           />
@@ -119,10 +118,9 @@ const DropdownForm = () => {
             id="email"
             value={formData.email}
             onChange={handleInputChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="nm@gmail.com"
             required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           />
           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
@@ -132,13 +130,12 @@ const DropdownForm = () => {
           </label>
           <input
             type="tel"
-            id="phone"
+            id="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleInputChange}
-            className="mt-1 p-2 w-full border rounded-md"
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="(000) 000-0000"
             required
-            pattern="\(\d{3}\) \d{3}-\d{4}"
           />
           {errors.phoneNumber && <p className="text-red-500 text-xs mt-1">{errors.phoneNumber}</p>}
         </div>
@@ -154,7 +151,7 @@ const DropdownForm = () => {
             id="date"
             value={formData.date}
             onChange={handleInputChange}
-            className="mt-1 p-2 w-full border rounded-md text-gray-400"
+            className="mt-1 p-2 w-full border rounded-md text-black"
             required
           />
         </div>
@@ -167,7 +164,7 @@ const DropdownForm = () => {
             id="time"
             value={formData.time}
             onChange={handleInputChange}
-            className="mt-1 p-2 w-full border rounded-md text-gray-400"
+            className="mt-1 p-2 w-full border rounded-md text-black"
           />
         </div>
       </div>
@@ -177,10 +174,10 @@ const DropdownForm = () => {
           Comments
         </label>
         <textarea
-          id="comments"
+          id="comment"
           value={formData.comment}
           onChange={handleInputChange}
-          className="mt-1 p-2 w-full border rounded-md"
+          className="mt-1 p-2 w-full border rounded-md text-black"
           placeholder="Enter any comments"
         />
       </div>
