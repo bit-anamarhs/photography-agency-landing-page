@@ -1,11 +1,99 @@
-
-import React from 'react';
+import  { useState } from 'react';
 
 const DropdownForm = () => {
+  // State to hold form data
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    date: '',
+    time: '',
+    comment: ''
+  });
+
+  // State to handle validation errors
+  const [errors, setErrors] = useState({
+    email: '',
+    phoneNumber: ''
+  });
+
+  // Handle input changes
+  const handleInputChange = (e: any) => {
+    const { id, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [id]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    // Simple validation
+    const newErrors = {
+      email: '',
+      phoneNumber: ''
+    };
+    let hasErrors = false;
+
+    // Email validation
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address.';
+      hasErrors = true;
+    }
+
+    // Phone validation
+    if (!/\d{3}\d{3}\d{4}/.test(formData.phoneNumber)) {
+      newErrors.phoneNumber = 'Please enter a valid phone number.';
+      hasErrors = true;
+    }
+
+    if (hasErrors) {
+      setErrors(newErrors);
+      return;
+    }
+
+    const formattedData = {
+      username: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phoneNumber: formData.phoneNumber,
+      date: new Date(formData.date).toISOString(), // Convert to ISO string
+      time: formData.time,
+      comment: formData.comment,
+    };
+
+    fetch('http://localhost:3000/api/bookacall/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formattedData),
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+    // Clear form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phoneNumber: '',
+      date: '',
+      time: '',
+      comment: ''
+    });
+  };
+
   return (
-    <form
+    <form 
       className="absolute mt-4 bg-gray-100 p-6 rounded-md shadow-md left-0 w-[343px] btn_white"
       style={{ top: '100%' }}
+      onSubmit={handleSubmit}
     >
       <div className="mb-6 flex space-x-6">
         <div className="flex-1">
@@ -15,7 +103,9 @@ const DropdownForm = () => {
           <input
             type="text"
             id="firstName"
-            className="mt-1 p-2 w-full border rounded-md"
+            value={formData.firstName}
+            onChange={handleInputChange}
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="First Name"
             required
           />
@@ -27,7 +117,9 @@ const DropdownForm = () => {
           <input
             type="text"
             id="lastName"
-            className="mt-1 p-2 w-full border rounded-md"
+            value={formData.lastName}
+            onChange={handleInputChange}
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="Last Name"
             required
           />
@@ -42,14 +134,13 @@ const DropdownForm = () => {
           <input
             type="email"
             id="email"
-            className="mt-1 p-2 w-full border rounded-md"
+            value={formData.email}
+            onChange={handleInputChange}
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="nm@gmail.com"
             required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           />
-          <p className="text-red-500 text-xs mt-1 hidden" id="emailError">
-            Please enter a valid email address.
-          </p>
+          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
         <div className="flex-1">
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
@@ -57,15 +148,14 @@ const DropdownForm = () => {
           </label>
           <input
             type="tel"
-            id="phone"
-            className="mt-1 p-2 w-full border rounded-md"
+            id="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleInputChange}
+            className="mt-1 p-2 w-full border rounded-md text-black"
             placeholder="(000) 000-0000"
             required
-            pattern="\(\d{3}\) \d{3}-\d{4}"
           />
-          <p className="text-red-500 text-xs mt-1 hidden" id="phoneError">
-            Please enter a valid phone number.
-          </p>
+          {errors.phoneNumber && <p className="text-red-500 text-xs mt-1">{errors.phoneNumber}</p>}
         </div>
       </div>
 
@@ -77,7 +167,9 @@ const DropdownForm = () => {
           <input
             type="date"
             id="date"
-            className="mt-1 p-2 w-full border rounded-md text-gray-400"
+            value={formData.date}
+            onChange={handleInputChange}
+            className="mt-1 p-2 w-full border rounded-md text-black"
             required
           />
         </div>
@@ -88,8 +180,9 @@ const DropdownForm = () => {
           <input
             type="time"
             id="time"
-            className="mt-1 p-2 w-full border rounded-md text-gray-400"
-            required
+            value={formData.time}
+            onChange={handleInputChange}
+            className="mt-1 p-2 w-full border rounded-md text-black"
           />
         </div>
       </div>
@@ -99,20 +192,21 @@ const DropdownForm = () => {
           Comments
         </label>
         <textarea
-          id="comments"
-          className="mt-1 p-2 w-full border rounded-md"
+          id="comment"
+          value={formData.comment}
+          onChange={handleInputChange}
+          className="mt-1 p-2 w-full border rounded-md text-black"
           placeholder="Enter any comments"
         />
       </div>
       <div className="flex justify-center mt-6">
-  <button
-    type="submit"
-    className="px-4 py-2 bg-[#374151] text-white rounded-md transition-all duration-300 ease-in-out transform hover:bg-[#4a4a4a] hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#374151]"
-  >
-    Submit
-  </button>
-</div>
-
+        <button
+          type="submit"
+          className="px-4 py-2 bg-[#374151] text-white rounded-md transition-all duration-300 ease-in-out transform hover:bg-[#4a4a4a] hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#374151]"
+        >
+          Submit
+        </button>
+      </div>
     </form>
   );
 };

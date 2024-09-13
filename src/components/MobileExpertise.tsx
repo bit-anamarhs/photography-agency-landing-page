@@ -1,6 +1,12 @@
 "use client";
 import React from "react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 
 const MobileExpertise = () => {
@@ -10,7 +16,7 @@ const MobileExpertise = () => {
     "https://images.unsplash.com/photo-1541414779316-956a5084c0d4?q=80&w=1614&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://plus.unsplash.com/premium_photo-1683140621573-233422bfc7f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8fHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8fHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   ];
 
   return (
@@ -31,21 +37,18 @@ const MobileExpertise = () => {
           </p>
         </div>
         <div className="relative">
-          <Carousel
-            opts={{ align: "start" }}
-            className="w-full"
-          >
+          <Carousel opts={{ align: "start" }} className="w-full ">
             <CarouselContent>
               {images.map((data, index) => (
                 <CarouselItem
                   key={index}
-                  className="flex justify-center items-center"
+                  className="flex justify-center items-center overflow-visible"
                 >
-                  <Card className="w-full h-[300px] mx-2">
+                  <Card className="w-full h-[67vw] mx-2">
                     <CardContent className="flex items-center justify-center p-0">
                       <img
                         src={data}
-                        className="w-full h-full object-cover rounded-xl carousel-image"
+                        className="w-full h-full rounded-xl carousel-image"
                         alt={`Expertise ${index}`}
                       />
                     </CardContent>
@@ -53,8 +56,8 @@ const MobileExpertise = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
-            <CarouselNext className="absolute right-2 top-1/2 transform -translate-y-1/2 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
+            <CarouselPrevious className="absolute -bottom-2 transform -translate-y-1 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
+            <CarouselNext className="absolute  -bottom-2 transform -translate-y-1 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
           </Carousel>
         </div>
       </div>
