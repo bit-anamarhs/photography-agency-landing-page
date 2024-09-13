@@ -316,15 +316,12 @@ body {
   flex: 0 0 auto; 
 }
 
-/* .product-preview {
-  z-index: 50; /* Ensure this is higher than other elements */
 
 .product-preview {
   position: absolute;
   top: 70%; /* Adjust as necessary */
   left: 32px;
   width: 28rem;
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
   background-color: white;
   z-index: 50;
 }
@@ -334,12 +331,10 @@ body {
   top: 0; 
   left: 0; 
   width: 100%;
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
   background-color: white;
   z-index: 50;
 }
 
-/* Add this to your global CSS file or a relevant module CSS file */
 @keyframes fadeIn {
   from {
     opacity: 0;

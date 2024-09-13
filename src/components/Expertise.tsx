@@ -11,9 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import MobileExpertise from "./MobileExpertise";
 import {ExpertiseImages} from "../../constants/index"
 
-const Expertise = () => {
-  // Image URLs
-  
+const Expertise = () => {  
 
   return (
     <>
@@ -34,10 +32,7 @@ const Expertise = () => {
                 reality
               </div>
             </div>
-
-            <div className="md:w-1/5 w-full mt-4 md:mt-0">
-              {/* Optional: Add more content if needed */}
-            </div>
+            
           </div>
           <div className="md:mt-4 mt-6 grid grid-cols-4 gap-2">
             <div className="md:col-span-1 col-span-4">

@@ -1,4 +1,3 @@
-import { lookup } from "dns";
 
 export const NAV_LINKS = [
 
