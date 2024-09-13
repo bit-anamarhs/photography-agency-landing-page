@@ -25,7 +25,6 @@ const DropdownForm = () => {
       ...prevData,
       [id]: value
     }));
-    console.log("FormData: ", e.target);
   };
 
   // Handle form submission
@@ -56,8 +55,27 @@ const DropdownForm = () => {
       return;
     }
 
-    // Process the form data (e.g., send it to an API or log it)
-    console.log('Form Data:', formData);
+    const formattedData = {
+      username: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phoneNumber: formData.phoneNumber,
+      date: new Date(formData.date).toISOString(), // Convert to ISO string
+      time: formData.time,
+      comment: formData.comment,
+    };
+
+    fetch('http://localhost:3000/api/bookacall/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formattedData),
+    })
+    .then(response => response.json())
+    .then(data => console.log('Success:', data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
 
     // Clear form
     setFormData({
