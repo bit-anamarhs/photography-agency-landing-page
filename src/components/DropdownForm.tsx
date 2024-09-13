@@ -1,6 +1,9 @@
 import  { useState } from 'react';
 
 const DropdownForm = () => {
+
+  const bookcallurl =  process.env.NEXT_PUBLIC_BOOKACALL
+
   // State to hold form data
   const [formData, setFormData] = useState({
     firstName: '',
@@ -64,7 +67,7 @@ const DropdownForm = () => {
       comment: formData.comment,
     };
 
-    fetch('http://localhost:3000/api/bookacall/', {
+    fetch(bookcallurl!, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
