@@ -97,9 +97,9 @@ const Navbar = () => {
 
       {/* Mobile Links */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-black flex flex-col items-center py-5 overflow-y-auto">
+        <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-gray-500 flex flex-col py-5 px-4">
           <button
-            className="absolute top-14 right-14 text-white focus:outline-none"
+            className="absolute top-5 right-5 text-white"
             onClick={handleMobileMenuToggle}
           >
             <svg
@@ -118,12 +118,17 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <ul className="flex flex-col items-center gap-6 mb-8">
+          {/* Book a Call Button */}
+          <div className="flex justify-start px-4 mb-4">
+            <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
+          </div>
+
+          <ul className="flex flex-col items-center gap-6 mb-8 flex-grow">
             {NAV_LINKS.map((link) => (
               <li key={link.key} className="w-full text-center">
                 <Link
                   href={link.href}
-                  className="block py-2 text-white hover:text-gray-300 transition-all"
+                  className="block py-3 text-white text-lg hover:text-gray-300 transition-all"
                   onClick={handleMobileMenuToggle}
                 >
                   {link.label}
@@ -132,9 +137,8 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex flex-col items-center gap-4 ml-32">
-            <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
-            <button className="w-12 h-12 inline-flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none mr-28">
+          <div className="flex justify-center gap-4 px-4 mb-4">
+            {/* <button className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -149,7 +153,7 @@ const Navbar = () => {
                   d="M17 7l-10 10M17 7H6.5M17 7v10"
                 />
               </svg>
-            </button>
+            </button> */}
           </div>
         </div>
       )}
