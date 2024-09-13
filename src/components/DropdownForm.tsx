@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const DropdownForm = () => {
   // State to hold form data
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    // firstName: '',
+    // lastName: '',
+    username: '',
     email: '',
-    phone: '',
+    phoneNumber: '',
     date: '',
     time: '',
-    comments: ''
+    comment: ''
   });
 
   // State to handle validation errors
   const [errors, setErrors] = useState({
     email: '',
-    phone: ''
+    phoneNumber: ''
   });
 
   // Handle input changes
@@ -34,7 +35,7 @@ const DropdownForm = () => {
     // Simple validation
     const newErrors = {
       email: '',
-      phone: ''
+      phoneNumber: ''
     };
     let hasErrors = false;
 
@@ -45,8 +46,8 @@ const DropdownForm = () => {
     }
 
     // Phone validation
-    if (!/\(\d{3}\) \d{3}-\d{4}/.test(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number.';
+    if (!/\(\d{3}\) \d{3}-\d{4}/.test(formData.phoneNumber)) {
+      newErrors.phoneNumber = 'Please enter a valid phone number.';
       hasErrors = true;
     }
 
@@ -60,13 +61,14 @@ const DropdownForm = () => {
 
     // Clear form
     setFormData({
-      firstName: '',
-      lastName: '',
+      // firstName: '',
+      // lastName: '',
+      username: '',
       email: '',
-      phone: '',
+      phoneNumber: '',
       date: '',
       time: '',
-      comments: ''
+      comment: ''
     });
   };
 
@@ -84,7 +86,7 @@ const DropdownForm = () => {
           <input
             type="text"
             id="firstName"
-            value={formData.firstName}
+            value={formData.username}
             onChange={handleInputChange}
             className="mt-1 p-2 w-full border rounded-md"
             placeholder="First Name"
@@ -98,7 +100,7 @@ const DropdownForm = () => {
           <input
             type="text"
             id="lastName"
-            value={formData.lastName}
+            value={formData.username}
             onChange={handleInputChange}
             className="mt-1 p-2 w-full border rounded-md"
             placeholder="Last Name"
@@ -131,14 +133,14 @@ const DropdownForm = () => {
           <input
             type="tel"
             id="phone"
-            value={formData.phone}
+            value={formData.phoneNumber}
             onChange={handleInputChange}
             className="mt-1 p-2 w-full border rounded-md"
             placeholder="(000) 000-0000"
             required
             pattern="\(\d{3}\) \d{3}-\d{4}"
           />
-          {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+          {errors.phoneNumber && <p className="text-red-500 text-xs mt-1">{errors.phoneNumber}</p>}
         </div>
       </div>
 
@@ -176,7 +178,7 @@ const DropdownForm = () => {
         </label>
         <textarea
           id="comments"
-          value={formData.comments}
+          value={formData.comment}
           onChange={handleInputChange}
           className="mt-1 p-2 w-full border rounded-md"
           placeholder="Enter any comments"
