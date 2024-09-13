@@ -324,7 +324,7 @@ body {
   top: 70%; /* Adjust as necessary */
   left: 32px;
   width: 28rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
   background-color: white;
   z-index: 50;
 }
@@ -334,7 +334,7 @@ body {
   top: 0; 
   left: 0; 
   width: 100%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
   background-color: white;
   z-index: 50;
 }

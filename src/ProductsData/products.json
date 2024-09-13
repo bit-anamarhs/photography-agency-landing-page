@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "name": "Juicer Mixer Grinder",
+        "name": "E-commerce Website",
         "category": "Category D",
         "subcategory": "Subcategory 4",
         "price": 300,
         "brand": "Brand D",
         "size": "XL",
         "color": "Black",
-        "image": "/products/grinder.jpg",
-        "description": "NutriPro Juicer Mixer Grinder - Smoothie Maker - 500 Watts (2 Jar, Silver) - 2 Year Warranty",
+        "image": "https://cdn.dribbble.com/userupload/9643919/file/original-964e7c7ed9c77cfa90cf565645804613.png?resize=1024x768",
+        "description": "An online store to sell products and services.",
         "specifications": {
             "dimensions": "40x30x5 cm",
             "weight": "1.5kg",
@@ -26,15 +26,15 @@
     },
     {
         "id": 2,
-        "name": "Cetaphil Face Wash",
+        "name": "Portfolio Website",
         "category": "Category B",
         "subcategory": "Subcategory 2",
         "price": 200,
         "brand": "Brand B",
         "size": "L",
         "color": "Blue",
-        "image": "/products/facewash.jpg",
-        "description": "Cetaphil Face Wash Gentle Skin Cleanser for Dry to Normal, Sensitive Skin, 125 ml Hydrating Face Wash with Niacinamide, Vitamin B5",
+        "image": "https://cdn.dribbble.com/userupload/4925719/file/original-93bff3b1e43427e5b34f58bc2bc4b7de.png?resize=1024x768",
+        "description": "A website showcasing personal or professional projects.",
         "specifications": {
             "dimensions": "20x20x10 cm",
             "weight": "1kg",
@@ -51,15 +51,15 @@
     },
     {
         "id": 3,
-        "name": "Aqua Pentagon Luggage",
+        "name": "Business/Corporate Website",
         "category": "Category C",
         "subcategory": "Subcategory 3",
         "price": 150,
         "brand": "Brand C",
         "size": "S",
         "color": "Green",
-        "image": "/products/Luggage.jpg",
-        "description": "Aristocrat Polypropylene (PP) Armstrong Cabin 55 Cm(Small) 4 Spinner Wheels Trolley Bags for Travel Hardcase Luggage, Lightweight Bag with Combination Lock (Teal Blue)",
+        "image": "https://cdn.dribbble.com/userupload/3237988/file/original-9beac786efbf93c18b74da6def2f87fe.png?resize=1024x768",
+        "description": "A website representing a company's services or products.",
         "specifications": {
             "dimensions": "25x10x10 cm",
             "weight": "750g",
@@ -76,15 +76,15 @@
     },
     {
         "id": 4,
-        "name": "Men's Cotton",
+        "name": "Blog Website",
         "category": "Category D",
         "subcategory": "Subcategory 4",
         "price": 300,
         "brand": "Brand D",
         "size": "XL",
         "color": "Black",
-        "image": "/products/mens_shirt3.jpg",
-        "description": "LookMark Men's Cotton Blend Stitched Half Sleeve",
+        "image": "https://cdn.dribbble.com/userupload/5300978/file/original-63652306e44124f3352690b835c86e55.jpg?resize=1024x768",
+        "description": "A platform for sharing articles, tips, or experiences.",
         "specifications": {
             "dimensions": "40x30x5 cm",
             "weight": "1.5kg",
@@ -101,15 +101,15 @@
     },
     {
         "id": 5,
-        "name": "Airdopes",
+        "name": "News Website",
         "category": "Category E",
         "subcategory": "Subcategory 5",
         "price": 250,
         "brand": "Brand E",
         "size": "M",
         "color": "Yellow",
-        "image": "/products/airdopes.jpg",
-        "description": "boAt Airdopes 91 Truly Wireless in Ear Ear Buds w/ 45 hrs Playtime, Beast Mode with 50 ms Low Latency, Dual Mics with ENx, ASAP Charge, IWP Tech, IPX4 & Bluetooth v5.3(Starry Blue)",
+        "image": "https://cdn.dribbble.com/userupload/16045043/file/original-725220a9858acb4f0569569ea0afdc83.png?resize=1024x768",
+        "description": "A site delivering the latest news and current affairs.",
         "specifications": {
             "dimensions": "15x15x10 cm",
             "weight": "200g",
@@ -126,115 +126,15 @@
     },
     {
         "id": 6,
-        "name": "OnePlus Nord CE4",
+        "name": "Educational Website",
         "category": "Category D",
         "subcategory": "Subcategory 4",
         "price": 300,
         "brand": "Brand D",
         "size": "XL",
         "color": "Black",
-        "image": "/products/oneplus.jpg",
-        "description": "OnePlus Nord CE4 (Celadon Marble, 256 GB)  (8 GB RAM)",
-        "specifications": {
-            "dimensions": "40x30x5 cm",
-            "weight": "1.5kg",
-            "materials": "Polyester"
-        },
-        "reviews": [
-            {
-                "user": "Emily",
-                "rating": 5,
-                "comment": "Excellent quality!"
-            }
-        ],
-        "stock": 12
-    },
-    {
-        "id": 7,
-        "name": "Samsung Galaxy Book2",
-        "category": "Category D",
-        "subcategory": "Subcategory 4",
-        "price": 300,
-        "brand": "Brand D",
-        "size": "XL",
-        "color": "Black",
-        "image": "/products/laptop.jpg",
-        "description": "Samsung Galaxy Book2 NP550XED-KA1IN 12th Generation Intel Core i5-1235U 15.6 Inches Notebook Laptop (8GB/512GB SSD/Windows 11/Graphite/1.85 Kg)",
-        "specifications": {
-            "dimensions": "40x30x5 cm",
-            "weight": "1.5kg",
-            "materials": "Polyester"
-        },
-        "reviews": [
-            {
-                "user": "Emily",
-                "rating": 5,
-                "comment": "Excellent quality!"
-            }
-        ],
-        "stock": 12
-    },
-    {
-        "id": 9,
-        "name": "Juicer Mixer Grinder",
-        "category": "Category D",
-        "subcategory": "Subcategory 4",
-        "price": 300,
-        "brand": "Brand D",
-        "size": "XL",
-        "color": "Black",
-        "image": "/products/alexa.jpg",
-        "description": "amazon Echo Dot (5th Gen) with Built-in Alexa Smart Wi-Fi Speaker (Ambient Temperature Sensor, Blue)",
-        "specifications": {
-            "dimensions": "40x30x5 cm",
-            "weight": "1.5kg",
-            "materials": "Polyester"
-        },
-        "reviews": [
-            {
-                "user": "Emily",
-                "rating": 5,
-                "comment": "Excellent quality!"
-            }
-        ],
-        "stock": 12
-    },
-    {
-        "id": 10,
-        "name": "Mens Shoe",
-        "category": "Category A",
-        "subcategory": "Subcategory 1",
-        "price": 100,
-        "brand": "Brand A",
-        "size": "M",
-        "color": "Red",
-        "image": "/products/shoe.jpg",
-        "description": "Symactive Mens Fanatic Running Shoe",
-        "specifications": {
-            "dimensions": "10x10x5 cm",
-            "weight": "500g",
-            "materials": "Cotton"
-        },
-        "reviews": [
-            {
-                "user": "John",
-                "rating": 4,
-                "comment": "Great product!"
-            }
-        ],
-        "stock": 10
-    },
-    {
-        "id": 11,
-        "name": "Neoprene Dumbbell",
-        "category": "Category D",
-        "subcategory": "Subcategory 4",
-        "price": 300,
-        "brand": "Brand D",
-        "size": "XL",
-        "color": "Black",
-        "image": "/products/dumbbell.jpg",
-        "description": "amazon basics Neoprene Dumbbell Pair, 2 x 2Kg",
+        "image": "https://cdn.dribbble.com/users/2128942/screenshots/15798719/media/1aacc75de064520eca1eec9df1b409b7.png?resize=768x576&vertical=center",
+        "description": "A platform providing educational content and resources.",
         "specifications": {
             "dimensions": "40x30x5 cm",
             "weight": "1.5kg",
