@@ -81,3 +81,12 @@ export const awardsData = [
     description: "Celebrated for groundbreaking architectural photography, capturing the interplay of light and structure.",
   },
 ];
+
+
+export const ExpertiseImages = [
+  "https://cdn.dribbble.com/userupload/9643919/file/original-964e7c7ed9c77cfa90cf565645804613.png?resize=1024x768",
+  "https://cdn.dribbble.com/userupload/4925719/file/original-93bff3b1e43427e5b34f58bc2bc4b7de.png?resize=1024x768",
+  "https://cdn.dribbble.com/userupload/3237988/file/original-9beac786efbf93c18b74da6def2f87fe.png?resize=1024x768",
+  "https://cdn.dribbble.com/userupload/5300978/file/original-63652306e44124f3352690b835c86e55.jpg?resize=1024x768",
+  "https://cdn.dribbble.com/userupload/16045043/file/original-725220a9858acb4f0569569ea0afdc83.png?resize=1024x768",
+];
