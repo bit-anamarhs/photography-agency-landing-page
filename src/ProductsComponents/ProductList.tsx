@@ -4,11 +4,11 @@ import { Product } from "../../constants/types";
 import ProductCard from "./ProductCard";
 import productsData from "../ProductsData/products.json";
 
+
 const ProductList = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(productsData);
-
-  // Sorting products
+  
   const sortProducts = (option: string) => {
     const sorted = [...filteredProducts];
     if (option === "price") {
@@ -18,8 +18,6 @@ const ProductList = () => {
     }
     setFilteredProducts(sorted);
   };
-
-  // Filtering products by search query
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value.toLowerCase();
     setSearchQuery(query);
@@ -31,6 +29,7 @@ const ProductList = () => {
   };
 
   return (
+    
     <div className="container mx-auto p-4">
       <div className="flex justify-between mb-6">
         <input
@@ -38,11 +37,11 @@ const ProductList = () => {
           placeholder="Search products..."
           value={searchQuery}
           onChange={handleSearch}
-          className="p-2 border border-gray-300 rounded-lg w-2/3"
+          className="p-2 border border-gray-300 rounded-full w-2"
         />
         <select
           onChange={(e) => sortProducts(e.target.value)}
-          className="p-2 border border-gray-300 rounded-lg w-1/3"
+          className="p-2 border border-gray-300 rounded-full w-1/3"
         >
           <option value="">Sort By</option>
           <option value="price">Price</option>
