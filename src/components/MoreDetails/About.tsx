@@ -74,12 +74,12 @@ export default function Contribute() {
                 </div>
                 <div className="flex flex-col gap-5 mb-10 mx-w-7xl">
                     <h1 className="text-6xl font-semibold text-gray-300 text-center">Contributors</h1>
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-5 mt-20 mb-20 max-w-7xl">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 xlg:grid-cols-4 md:grid-cols-2 gap-5 mt-20 mb-20 max-w-7xl">
                         {contributors.map((conrtibutor, index) => (
                             <div key={index} className="flex flex-col justify-between rounded-2xl p-10 bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border border-white border-opacity-20 shadow-lg">
                                 <Rating name="read-only" value={5} readOnly />
                                 <div className="py-5 text-white">{conrtibutor.des}</div>
-                                <div className="flex flex-wrap flex-row gap-5">
+                                <div className="flex flex-wrap flex-row gap-5 md:flex-col xl:flex-row">
                                     <img src={conrtibutor.img} className="rounded-full w-10 h-10" />
                                     <div className="flex flex-col">
                                         <h1 className="text-white text-xl">{conrtibutor.name}</h1>
