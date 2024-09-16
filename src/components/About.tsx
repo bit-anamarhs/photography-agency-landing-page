@@ -24,7 +24,7 @@ const About = () => {
               <span className="text-[#e7e7e7]">Photography</span> is driven by a deep passion for <span className="text-[#e7e7e7]"> capturing life's </span> most
               <span className="text-[#e7e7e7]"> precious moments </span> with artistry and a touch of magic.
             </article>
-            <Link href="/AboutUs">
+            <Link href="https://fstoppers.com/">
               <div className="buttons flex flex-row">
                 <button className="capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080] focus:outline-none transform hover:scale-95 active:scale-95 transition-all shadow-md">Learn More </button>
               </div>
