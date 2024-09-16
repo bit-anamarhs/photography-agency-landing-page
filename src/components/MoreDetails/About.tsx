@@ -83,7 +83,7 @@ export default function Contribute() {
                                     <img src={conrtibutor.img} className="rounded-full w-10 h-10" />
                                     <div className="flex flex-col">
                                         <h1 className="text-white text-xl">{conrtibutor.name}</h1>
-                                        <h3 className="underline">{conrtibutor.role}</h3>
+                                        <h3>{conrtibutor.role}</h3>
                                     </div>
                                 </div>
                             </div>
