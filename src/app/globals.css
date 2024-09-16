@@ -21,7 +21,7 @@ body {
   }
 
   .card-content {
-    @apply leading-7 text-gray-500
+    @apply leading-7 text-gray-400
   }
 
   .btn_white {
