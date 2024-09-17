@@ -33,7 +33,7 @@ const Award = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row justify-between gap-14">
-                <div className="flex flex-col lg:w-3/5">
+                <div className="flex flex-col lg:w-3/5 ">
                     {awardsData.map((award, index) => (
                         <div
                             key={index}
@@ -64,8 +64,8 @@ const Award = () => {
                     ))}
                 </div>
 
-                <div className="flex flex-col lg:w-1/2 mt-6 lg:mt-0 text-left">
-                    <div className="relative w-full h-60 overflow-hidden rounded-2xl mx-auto">
+                <div className="flex flex-col lg:w-1/2 text-left">
+                    <div className="relative w-full h-3/4 overflow-hidden rounded-2xl mx-auto">
                         <img
                             src={selectedAward.image} 
                             alt={selectedAward.title}

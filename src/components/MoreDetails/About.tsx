@@ -14,10 +14,10 @@ const contributors = [
 
 export default function Contribute() {
     return (
-        <div className="flex flex-col items-center bg-black pt-24">
+        <div className="flex flex-col items-center bg-black">
             <Navbar />
-            <div className="flex flex-col mt-10 mx-6 md:mx-24 items-center gap-16 text-white">
-                <div className="flex flex-col gap-7 items-center md:text-left w-2/3 max-w-7xl leading-10">
+            <div className="flex flex-col mt-36 mx-6 md:mx-24 items-center gap-16 text-white">
+                <div className="flex flex-col gap-10 items-center md:text-left w-2/3 max-w-7xl leading-10">
                     <div className="bg-[#363733] px-5 rounded-full font-bold w-fit">About Us</div>
                     <h1 className="text-[#363733] text-center text-7xl"><span className="text-gray-400">About Anamarhs</span> <br /> Crafting Exceptional Websites</h1>
                     <p className="text-center text-xl leading-7 mt-10">Welcome to Anamarhs, your trusted software consultancy! Our dedicated team of professionals is committed to crafting beautiful and functional websites tailored precisely to meet your needs. Whether you're envisioning a sophisticated web application or a seamless digital solution, Anamarhs is here to turn your ideas into reality. Our innovative approach and user-friendly tools empower you to create cutting-edge applications effortlessly. Begin your journey with us today and transform your software visions into impactful digital experiences!</p>

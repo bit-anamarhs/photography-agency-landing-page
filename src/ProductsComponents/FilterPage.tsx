@@ -152,7 +152,7 @@ const FilterPage = () => {
           <button
             onClick={applyFilters}
             className="p-1.5 border border-gray-300 rounded-full bg-[#363733] text-sm text-white hover:bg-white hover:text-black focus:ring-2 focus:ring-gray-500 transition-all"
-            style={{ width: "150px", height: "40px" }} // Adjust these values as necessary
+            style={{ width: "150px", height: "40px" }} 
           >
             Apply Filters
           </button>

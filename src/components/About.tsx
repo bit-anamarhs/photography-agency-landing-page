@@ -1,6 +1,7 @@
 import React from "react";
 import { MdArrowForward } from 'react-icons/md';
 import Link from "next/link";
+import Image from "next/image";
 
 
 const About = () => {
@@ -29,6 +30,7 @@ const About = () => {
                 <button className="capitalize border-2 border-[#8f8f8f] rounded-[50px] px-6 py-2 hover:bg-[#808080] hover:text-black hover:border-[#808080] focus:outline-none transform hover:scale-95 active:scale-95 transition-all shadow-md">Learn More </button>
               </div>
             </Link>
+            <img src="/templates/about-us.jpeg" className="mt-10 rounded-2xl" alt="IMG" />
           </div>
         </div>
       </div>

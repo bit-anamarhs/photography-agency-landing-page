@@ -19,16 +19,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flexBetween max-w-screen-xl mx-auto px-5 lg:px-10 py-5 bg-gradient-to-b from-transparent to-transparent">
+    <nav className="fixed rounded-full top-10 left-0 right-0 z-50 flexBetween max-w-screen-xl mx-auto px-5 lg:px-5 py-2 bg-white/30 backdrop-blur-md">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <img
             src="/logo.png"
             alt="CeelestialUI"
             className="rounded-2xl w-12 h-12"
-          /> 
+          />
         </Link>
-        <p className="text-[#ffffff] text-lg font-semibold mt-8 mb-8">CeelestialUI</p>
+        <p className="text-[#ffffff] text-lg font-semibold">CeelestialUI</p>
       </div>
 
       {/* Desktop Links */}
