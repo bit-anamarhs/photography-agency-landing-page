@@ -35,14 +35,11 @@ export interface Product {
   id: number;
   name: string;
   category: string;
-  subcategory: string;
   price: number;
-  brand: string;
-  size: string;
-  color: string;
+  templateStyle: string;
+  techStack: string;
+  layoutType: string;
+  features: string[];
   image: string;
   description: string;
-  specifications: Specifications;
-  reviews: Review[];
-  stock: number;
 }
