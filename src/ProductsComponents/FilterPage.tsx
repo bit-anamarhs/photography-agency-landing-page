@@ -65,13 +65,11 @@ const FilterPage = () => {
   return (
     <div className="container mx-auto p-6 flex flex-col space-y-6 py-4">
       {/* Filter Section */}
-      <div className="bg-white/10 backdrop-blur-lg p-4 rounded-lg shadow-lg flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8">
-        <div className="flex flex-row md:flex-col justify-center space-x-6 align-middle text-center w-full">
+      <div className="bg-white/10 backdrop-blur-lg p-4 rounded-lg shadow-lg flex flex-col md:flex-row md:space-x-4 mb-8">
+        <div className="flex flex-col space-y-4 gap-3 md:flex-row md:space-x-4 w-full">
           {/* Category Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">
-              Category:
-            </label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Category</label>
             <select
               name="category"
               value={filters.category}
@@ -91,10 +89,8 @@ const FilterPage = () => {
           </div>
 
           {/* Template Style Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">
-              Template Style:
-            </label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Template Style</label>
             <select
               name="templateStyle"
               value={filters.templateStyle}
@@ -112,10 +108,8 @@ const FilterPage = () => {
           </div>
 
           {/* Tech Stack Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">
-              Tech Stack:
-            </label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Tech Stack</label>
             <select
               name="techStack"
               value={filters.techStack}
@@ -133,10 +127,8 @@ const FilterPage = () => {
           </div>
 
           {/* Layout Type Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">
-              Layout Type:
-            </label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Layout Type</label>
             <select
               name="layoutType"
               value={filters.layoutType}
@@ -149,21 +141,22 @@ const FilterPage = () => {
               <option value="Landing-page">Landing-page</option>
             </select>
           </div>
-          <button
-            onClick={applyFilters}
-            className="p-1.5 border border-gray-300 rounded-full bg-[#363733] text-sm text-white hover:bg-white hover:text-black focus:ring-2 focus:ring-gray-500 transition-all"
-            style={{ width: "150px", height: "40px" }} 
-          >
-            Apply Filters
-          </button>
-        </div>
 
-        {/* <div className="w-full md:w-auto flex justify-center items-center mt-4 md:mt-0">
-        </div> */}
+          {/* Apply Filter Button */}
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm mt-4 text-white font-bold"></label>
+            <button
+              onClick={applyFilters}
+              className="w-full border border-gray-300 rounded-full h-10 bg-[#363733] text-sm text-white hover:bg-white hover:text-black focus:ring-2 focus:ring-gray-500 transition-all"
+            >
+              Apply Filters
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Product Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
