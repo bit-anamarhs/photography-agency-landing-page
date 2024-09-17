@@ -14,7 +14,7 @@ const contributors = [
 
 export default function Contribute() {
     return (
-        <div className="flex flex-col items-center bg-black">
+        <div className="flex flex-col items-center bg-black pt-24">
             <Navbar />
             <div className="flex flex-col mt-10 mx-6 md:mx-24 items-center gap-16 text-white">
                 <div className="flex flex-col gap-7 items-center md:text-left w-2/3 max-w-7xl leading-10">

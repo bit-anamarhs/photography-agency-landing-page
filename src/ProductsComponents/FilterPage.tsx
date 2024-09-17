@@ -42,7 +42,7 @@ const FilterPage = () => {
   return (
     <div className="container mx-auto p-6 flex flex-col space-y-6 py-4">
       {/* Filter Section */}
-      <div className="bg-white/10 backdrop-blur-lg p-4 rounded-lg shadow-lg flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
+      <div className="bg-white/10 backdrop-blur-lg p-4 rounded-lg shadow-lg flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
           {/* Category Filter */}
           <div className="flex flex-col space-y-2">
