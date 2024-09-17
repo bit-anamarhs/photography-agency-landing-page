@@ -1,8 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 
 const DropdownForm = () => {
 
-  const bookcallurl =  process.env.NEXT_PUBLIC_BOOKACALL
+  const bookcallurl = process.env.NEXT_PUBLIC_BOOKACALL
 
   // State to hold form data
   const [formData, setFormData] = useState({
@@ -74,11 +74,11 @@ const DropdownForm = () => {
       },
       body: JSON.stringify(formattedData),
     })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then(response => response.json())
+      .then(data => console.log('Success:', data))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
 
     setFormData({
       firstName: '',
@@ -92,8 +92,8 @@ const DropdownForm = () => {
   };
 
   return (
-    <form 
-      className="absolute mt-4 bg-gray-100 p-6 rounded-md shadow-md left-0 w-[343px] btn_white"
+    <form
+      className="absolute mt-2 left-0 md:left-auto md:right-0 bg-gray-100 p-6 rounded-md shadow-md w-[343px] btn_white"
       style={{ top: '100%' }}
       onSubmit={handleSubmit}
     >
