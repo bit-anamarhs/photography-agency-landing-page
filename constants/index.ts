@@ -56,25 +56,25 @@ export const WorkCards = [
 
 export const awardsData = [
   {
-    image: "/awards/sonnyWorld.jpg",
+    image: "/templates/award-1.jpeg",
     year: "2015",
     title: "Sony World Photography Awards",
     description: "Recognized for excellence in wildlife photography, capturing the beauty and majesty of the natural world.",
   },
   {
-    image: "/awards/travel.jpg",
+    image: "/templates/award-2.jpeg",
     year: "2017",
     title: "Travel Photographer Of The Year",
     description: "Awarded for stunning landscape photography that transports viewers to the heart of remote destinations.",
   },
   {
-    image: "/awards/magnum.jpg",
+    image: "/templates/award-3.jpeg",
     year: "2022",
     title: "Magnum Photography Awards",
     description: "Honored for innovative portrait photography that showcases unique perspectives and human stories.",
   },
   {
-    image: "/awards/international.jpg",
+    image: "/templates/award-5.jpeg",
     year: "2023",
     title: "International Photography Awards",
     description: "Celebrated for groundbreaking architectural photography, capturing the interplay of light and structure.",
