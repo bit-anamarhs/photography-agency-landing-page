@@ -321,7 +321,7 @@ body {
   position: absolute;
   top: 70%; /* Adjust as necessary */
   left: 32px;
-  width: 28rem;
+  /* width: 28rem; */
   background-color: white;
   z-index: 50;
 }

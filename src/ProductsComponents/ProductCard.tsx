@@ -14,14 +14,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover rounded-lg shadow-md transition-all duration-300 hover:scale-105"
+            className=" object-cover rounded-lg shadow-md transition-all duration-300"
           />
         </div>
         <p className="text-gray-300 mb-3 text-sm line-clamp-2">{product.description}</p>
       </div>
       <div className="mt-2">
         <Link href={product.image} target="_blank">
-          <button className="bg-white/20 text-white font-semibold px-4 py-2 rounded-full transition-all hover:bg-white hover:text-black hover:shadow-md">
+          <button className="hover:bg-white border-white border-2 md:text-black text-white hover:font-semibold px-4 py-2 rounded-full transition-all hover:border-white hover:border-2 hover:text-black ">
             View Details
           </button>
 

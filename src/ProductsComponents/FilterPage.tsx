@@ -5,7 +5,8 @@ import ProductCard from "../ProductsComponents/ProductCard";
 import productsData from "../ProductsData/products.json";
 
 const FilterPage = () => {
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>(productsData);
+  const [filteredProducts, setFilteredProducts] =
+    useState<Product[]>(productsData);
   const [filters, setFilters] = useState({
     category: "",
     priceRange: [0, 1000],
@@ -15,7 +16,9 @@ const FilterPage = () => {
     features: [] as string[],
   });
 
-  const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleFilterChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFilters((prevFilters) => ({
       ...prevFilters,
@@ -25,16 +28,36 @@ const FilterPage = () => {
 
   const applyFilters = () => {
     const filtered = productsData.filter((product) => {
-      const inPriceRange = product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1];
-      const inCategory = filters.category ? product.category === filters.category : true;
-      const inTemplateStyle = filters.templateStyle ? product.templateStyle === filters.templateStyle : true;
-      const inTechStack = filters.techStack ? product.techStack === filters.techStack : true;
-      const inLayoutType = filters.layoutType ? product.layoutType === filters.layoutType : true;
-      const hasFeatures = filters.features.length > 0
-        ? filters.features.every((feature) => product.features.includes(feature))
+      const inPriceRange =
+        product.price >= filters.priceRange[0] &&
+        product.price <= filters.priceRange[1];
+      const inCategory = filters.category
+        ? product.category === filters.category
         : true;
+      const inTemplateStyle = filters.templateStyle
+        ? product.templateStyle === filters.templateStyle
+        : true;
+      const inTechStack = filters.techStack
+        ? product.techStack === filters.techStack
+        : true;
+      const inLayoutType = filters.layoutType
+        ? product.layoutType === filters.layoutType
+        : true;
+      const hasFeatures =
+        filters.features.length > 0
+          ? filters.features.every((feature) =>
+              product.features.includes(feature)
+            )
+          : true;
 
-      return inPriceRange && inCategory && inTemplateStyle && inTechStack && inLayoutType && hasFeatures;
+      return (
+        inPriceRange &&
+        inCategory &&
+        inTemplateStyle &&
+        inTechStack &&
+        inLayoutType &&
+        hasFeatures
+      );
     });
     setFilteredProducts(filtered);
   };
@@ -42,11 +65,11 @@ const FilterPage = () => {
   return (
     <div className="container mx-auto p-6 flex flex-col space-y-6 py-4">
       {/* Filter Section */}
-      <div className="bg-white/10 backdrop-blur-lg p-4 rounded-lg shadow-lg flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4 mb-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+      <div className="bg-white/10 backdrop-blur-lg p-4 rounded-lg shadow-lg flex flex-col md:flex-row md:space-x-4 mb-8">
+        <div className="flex flex-col space-y-4 gap-3 md:flex-row md:space-x-4 w-full">
           {/* Category Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">Category:</label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Category</label>
             <select
               name="category"
               value={filters.category}
@@ -66,8 +89,8 @@ const FilterPage = () => {
           </div>
 
           {/* Template Style Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">Template Style:</label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Template Style</label>
             <select
               name="templateStyle"
               value={filters.templateStyle}
@@ -85,8 +108,8 @@ const FilterPage = () => {
           </div>
 
           {/* Tech Stack Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">Tech Stack:</label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Tech Stack</label>
             <select
               name="techStack"
               value={filters.techStack}
@@ -104,8 +127,8 @@ const FilterPage = () => {
           </div>
 
           {/* Layout Type Filter */}
-          <div className="flex flex-col space-y-2">
-            <label className="block text-sm text-white font-bold">Layout Type:</label>
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm text-white font-bold">Layout Type</label>
             <select
               name="layoutType"
               value={filters.layoutType}
@@ -118,21 +141,22 @@ const FilterPage = () => {
               <option value="Landing-page">Landing-page</option>
             </select>
           </div>
-        </div>
 
-        <div className="w-full md:w-auto flex justify-center items-center mt-4 md:mt-0">
-          <button
-            onClick={applyFilters}
-            className="p-1.5 border border-gray-300 rounded-full bg-[#363733] text-sm text-white hover:bg-white hover:text-black focus:ring-2 focus:ring-gray-500 transition-all"
-            style={{ width: "150px", height: "40px" }} 
-          >
-            Apply Filters
-          </button>
+          {/* Apply Filter Button */}
+          <div className="flex flex-col space-y-2 w-full">
+            <label className="block text-sm mt-4 text-white font-bold"></label>
+            <button
+              onClick={applyFilters}
+              className="w-full border border-gray-300 rounded-full h-10 bg-[#363733] text-sm text-white hover:bg-white hover:text-black focus:ring-2 focus:ring-gray-500 transition-all"
+            >
+              Apply Filters
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Product Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
