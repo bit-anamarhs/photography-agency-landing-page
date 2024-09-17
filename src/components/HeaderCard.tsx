@@ -68,7 +68,7 @@ const HeaderCard = () => {
   return (
     <>
       {/* Highlight section */}
-      <div className="flex items-center justify-between w-full relative mb-4">
+      <div className="flex items-center justify-between w-full relative mb-4 mt-16">
         <span className="text-sm font-medium text-white">
           {String(currentItemIndex + 1).padStart(2, '0')}
         </span>

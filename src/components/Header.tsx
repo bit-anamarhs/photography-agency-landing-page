@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <section className="max-container px-4 sm:px-6 md:px-10 flex flex-col gap-10 sm:gap-16 md:gap-20 py-6 sm:py-8 md:py-10 pb-16 sm:pb-24 md:pb-32 lg:gap-28 xl:flex-row">
       <div className="relative z-20 flex flex-1 flex-col xl:w-1/2">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7px text-white leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7px text-white leading-tight mt-44">
           Capturing beautiful <br className="hidden sm:inline" />
           moment inside lens and <br className="hidden sm:inline" />
           shutterspeed
