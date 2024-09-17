@@ -15,8 +15,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
       <h2 className="text-lg font-semibold mb-2 text-gray-900">{product.name}</h2>
       <p className="text-sm text-gray-700 mb-3">{product.description}</p>
       <p className="text-base font-bold text-gray-800 mb-3">Price: ${product.price}</p>
-      {/* Removed specifications section */}
-      {/* Removed reviews section */}
       <div className="mt-2 flex space-x-2">
         <button className="bg-blue-500 text-white px-3 py-1 text-xs rounded-md hover:bg-blue-600">
           Add to Cart
