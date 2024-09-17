@@ -1,152 +1,74 @@
 [
     {
-        "id": 1,
-        "name": "E-commerce Website",
-        "category": "Category D",
-        "subcategory": "Subcategory 4",
-        "price": 300,
-        "brand": "Brand D",
-        "size": "XL",
-        "color": "Black",
-        "image": "https://cdn.dribbble.com/userupload/9643919/file/original-964e7c7ed9c77cfa90cf565645804613.png?resize=1024x768",
-        "description": "An online store to sell products and services.",
-        "specifications": {
-            "dimensions": "40x30x5 cm",
-            "weight": "1.5kg",
-            "materials": "Polyester"
-        },
-        "reviews": [
-            {
-                "user": "Emily",
-                "rating": 5,
-                "comment": "Excellent quality!"
-            }
-        ],
-        "stock": 12
+      "id": 1,
+      "name": "E-commerce Website",
+      "category": "E-commerce",
+      "price": 300,
+      "templateStyle": "Modern",
+      "techStack": "React",
+      "layoutType": "Multi-page",
+      "features": ["Animations", "SEO optimized", "E-commerce ready"],
+      "image": "https://cdn.dribbble.com/userupload/9643919/file/original-964e7c7ed9c77cfa90cf565645804613.png?resize=1024x768",
+      "description": "An online store to sell products and services."
     },
     {
-        "id": 2,
-        "name": "Portfolio Website",
-        "category": "Category B",
-        "subcategory": "Subcategory 2",
-        "price": 200,
-        "brand": "Brand B",
-        "size": "L",
-        "color": "Blue",
-        "image": "https://cdn.dribbble.com/userupload/4925719/file/original-93bff3b1e43427e5b34f58bc2bc4b7de.png?resize=1024x768",
-        "description": "A website showcasing personal or professional projects.",
-        "specifications": {
-            "dimensions": "20x20x10 cm",
-            "weight": "1kg",
-            "materials": "Wool"
-        },
-        "reviews": [
-            {
-                "user": "Anna",
-                "rating": 5,
-                "comment": "Amazing!"
-            }
-        ],
-        "stock": 5
+      "id": 2,
+      "name": "Portfolio Website",
+      "category": "Portfolio",
+      "price": 200,
+      "templateStyle": "Creative",
+      "techStack": "Next.js",
+      "layoutType": "One-page",
+      "features": ["SEO optimized", "Contact Forms"],
+      "image": "https://cdn.dribbble.com/userupload/4925719/file/original-93bff3b1e43427e5b34f58bc2bc4b7de.png?resize=1024x768",
+      "description": "A website showcasing personal or professional projects."
     },
     {
-        "id": 3,
-        "name": "Business/Corporate Website",
-        "category": "Category C",
-        "subcategory": "Subcategory 3",
-        "price": 150,
-        "brand": "Brand C",
-        "size": "S",
-        "color": "Green",
-        "image": "https://cdn.dribbble.com/userupload/3237988/file/original-9beac786efbf93c18b74da6def2f87fe.png?resize=1024x768",
-        "description": "A website representing a company's services or products.",
-        "specifications": {
-            "dimensions": "25x10x10 cm",
-            "weight": "750g",
-            "materials": "Leather"
-        },
-        "reviews": [
-            {
-                "user": "Mark",
-                "rating": 4,
-                "comment": "Very comfortable!"
-            }
-        ],
-        "stock": 8
+      "id": 3,
+      "name": "Business Website",
+      "category": "Business",
+      "price": 150,
+      "templateStyle": "Corporate",
+      "techStack": "Tailwind CSS",
+      "layoutType": "Multi-page",
+      "features": ["Contact Forms", "SEO optimized"],
+      "image": "https://cdn.dribbble.com/userupload/3237988/file/original-9beac786efbf93c18b74da6def2f87fe.png?resize=1024x768",
+      "description": "A website representing a company's services or products."
     },
     {
-        "id": 4,
-        "name": "Blog Website",
-        "category": "Category D",
-        "subcategory": "Subcategory 4",
-        "price": 300,
-        "brand": "Brand D",
-        "size": "XL",
-        "color": "Black",
-        "image": "https://cdn.dribbble.com/userupload/5300978/file/original-63652306e44124f3352690b835c86e55.jpg?resize=1024x768",
-        "description": "A platform for sharing articles, tips, or experiences.",
-        "specifications": {
-            "dimensions": "40x30x5 cm",
-            "weight": "1.5kg",
-            "materials": "Polyester"
-        },
-        "reviews": [
-            {
-                "user": "Emily",
-                "rating": 5,
-                "comment": "Excellent quality!"
-            }
-        ],
-        "stock": 12
+      "id": 4,
+      "name": "Blog Website",
+      "category": "Blogs",
+      "price": 250,
+      "templateStyle": "Minimalist",
+      "techStack": "Gatsby",
+      "layoutType": "Multi-page",
+      "features": ["SEO optimized", "Comment System"],
+      "image": "https://cdn.dribbble.com/userupload/5300978/file/original-63652306e44124f3352690b835c86e55.jpg?resize=1024x768",
+      "description": "A platform for sharing articles, tips, or experiences."
     },
     {
-        "id": 5,
-        "name": "News Website",
-        "category": "Category E",
-        "subcategory": "Subcategory 5",
-        "price": 250,
-        "brand": "Brand E",
-        "size": "M",
-        "color": "Yellow",
-        "image": "https://cdn.dribbble.com/userupload/16045043/file/original-725220a9858acb4f0569569ea0afdc83.png?resize=1024x768",
-        "description": "A site delivering the latest news and current affairs.",
-        "specifications": {
-            "dimensions": "15x15x10 cm",
-            "weight": "200g",
-            "materials": "Wool"
-        },
-        "reviews": [
-            {
-                "user": "Sophia",
-                "rating": 4,
-                "comment": "Stylish and warm."
-            }
-        ],
-        "stock": 20
+      "id": 5,
+      "name": "News Website",
+      "category": "News",
+      "price": 400,
+      "templateStyle": "Dynamic",
+      "techStack": "WordPress",
+      "layoutType": "Landing-page",
+      "features": ["SEO optimized", "Live Updates"],
+      "image": "https://cdn.dribbble.com/userupload/16045043/file/original-725220a9858acb4f0569569ea0afdc83.png?resize=1024x768",
+      "description": "A site delivering the latest news and current affairs."
     },
     {
-        "id": 6,
-        "name": "Educational Website",
-        "category": "Category D",
-        "subcategory": "Subcategory 4",
-        "price": 300,
-        "brand": "Brand D",
-        "size": "XL",
-        "color": "Black",
-        "image": "https://cdn.dribbble.com/users/2128942/screenshots/15798719/media/1aacc75de064520eca1eec9df1b409b7.png?resize=768x576&vertical=center",
-        "description": "A platform providing educational content and resources.",
-        "specifications": {
-            "dimensions": "40x30x5 cm",
-            "weight": "1.5kg",
-            "materials": "Polyester"
-        },
-        "reviews": [
-            {
-                "user": "Emily",
-                "rating": 5,
-                "comment": "Excellent quality!"
-            }
-        ],
-        "stock": 12
+      "id": 6,
+      "name": "Educational Website",
+      "category": "Educational",
+      "price": 300,
+      "templateStyle": "Interactive",
+      "techStack": "Angular",
+      "layoutType": "Landing-page",
+      "features": ["Course Management", "SEO optimized"],
+      "image": "https://cdn.dribbble.com/users/2128942/screenshots/15798719/media/1aacc75de064520eca1eec9df1b409b7.png?resize=768x576&vertical=center",
+      "description": "A platform providing educational content and resources."
     }
 ]

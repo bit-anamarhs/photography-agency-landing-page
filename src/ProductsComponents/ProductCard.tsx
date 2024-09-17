@@ -21,9 +21,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       </div>
       <div className="mt-2">
         <Link href={product.image} target="_blank">
-          <button className="bg-white/20 text-white font-semibold px-4 py-2 rounded-full transition-all hover:bg-white hover:text-[#000000] hover:shadow-md">
+          <button className="bg-white/20 text-white font-semibold px-4 py-2 rounded-full transition-all hover:bg-white hover:text-black hover:shadow-md">
             View Details
           </button>
+
+          {/* add similar to the apply filter button if you want */}
+          {/* <button
+            className="bg-[#363733] text-white text-sm font-bold p-2 rounded-full border border-white transition-all hover:bg-white hover:text-black"
+          >
+            View Details
+          </button> */}
         </Link>
       </div>
     </div>
