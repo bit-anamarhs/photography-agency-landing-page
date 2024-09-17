@@ -21,7 +21,7 @@ body {
   }
 
   .card-content {
-    @apply leading-7 text-gray-500
+    @apply leading-7 text-gray-400
   }
 
   .btn_white {
@@ -52,7 +52,7 @@ body {
   }
 
   .btn_dark_green {
-    @apply bg-white px-6 py-3 mr-32 text-black transition-all  hover:bg-[#7f7f81] cursor-pointer shadow-md focus:outline-none  transform hover:scale-95 active:scale-95;
+    @apply bg-white px-6 py-3 text-black transition-all  hover:bg-[#b1b1b2] cursor-pointer shadow-md focus:outline-none  transform hover:scale-95 active:scale-95;
   }
 
 
@@ -316,15 +316,12 @@ body {
   flex: 0 0 auto; 
 }
 
-/* .product-preview {
-  z-index: 50; /* Ensure this is higher than other elements */
 
 .product-preview {
   position: absolute;
   top: 70%; /* Adjust as necessary */
   left: 32px;
-  width: 28rem;
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
+  /* width: 28rem; */
   background-color: white;
   z-index: 50;
 }
@@ -334,12 +331,10 @@ body {
   top: 0; 
   left: 0; 
   width: 100%;
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.2); */
   background-color: white;
   z-index: 50;
 }
 
-/* Add this to your global CSS file or a relevant module CSS file */
 @keyframes fadeIn {
   from {
     opacity: 0;

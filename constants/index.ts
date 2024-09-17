@@ -1,4 +1,3 @@
-import { lookup } from "dns";
 
 export const NAV_LINKS = [
 
@@ -6,7 +5,7 @@ export const NAV_LINKS = [
 
   { href: '/products', key: 'Products', label: 'Products' },
   { href: '/about', key: 'About', label: 'About' },
-  { href: '/', key: 'Template UI', label: 'Template UI' },
+  // { href: '/', key: 'Template UI', label: 'Template UI' },
 ];
 
 export const carouselData = [
@@ -38,44 +37,44 @@ export const WorkCards = [
     title: "Majestic Creatures of the African Savanna",
     description: "Capturing the exquisite patterns and dynamic energy of Africa’s most iconic big cat.",
     tags: ["Wildlife Portraits", "#Nature", "#Mammals", "#2022", "#Forest", "#2023", "#2024"],
-    link: "/Card1"  // Add unique link for the first card
+    link: "https://www.nhm.ac.uk/wpy"   
   },
   {
     image: "/card/card2.jpg",
     title: "A Temple’s Serene Silhouette",
     tags: ["#Nature", "#Architecture", "#2023", "#2024"],
-    link: "/Card2"  // Add unique link for the second card
+    link: "https://www.ancient-origins.net/"  
   },
   {
     image: "/card/card3.jpg",
     title: "Moments Framed in Portraits",
     tags: ["#Portraits", "#Art", "#2023", "#Architecture"],
-    link: "/Card3"  // Add unique link for the third card
+    link: "https://500px.com/"  
   },
 ];
 
 
 export const awardsData = [
   {
-    image: "/awards/sonnyWorld.jpg",
+    image: "/templates/award-1.jpeg",
     year: "2015",
     title: "Sony World Photography Awards",
     description: "Recognized for excellence in wildlife photography, capturing the beauty and majesty of the natural world.",
   },
   {
-    image: "/awards/travel.jpg",
+    image: "/templates/award-2.jpeg",
     year: "2017",
     title: "Travel Photographer Of The Year",
     description: "Awarded for stunning landscape photography that transports viewers to the heart of remote destinations.",
   },
   {
-    image: "/awards/magnum.jpg",
+    image: "/templates/award-3.jpeg",
     year: "2022",
     title: "Magnum Photography Awards",
     description: "Honored for innovative portrait photography that showcases unique perspectives and human stories.",
   },
   {
-    image: "/awards/international.jpg",
+    image: "/templates/award-5.jpeg",
     year: "2023",
     title: "International Photography Awards",
     description: "Celebrated for groundbreaking architectural photography, capturing the interplay of light and structure.",

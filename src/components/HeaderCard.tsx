@@ -10,9 +10,10 @@ const HeaderCard = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const totalItems = carouselData.length;
+  const scrollInterval = 5000; // Increase to 5 seconds for better visibility
 
   useEffect(() => {
-    const handleScroll = () => {
+    const updateIndex = () => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
         const maxScrollLeft = scrollWidth - clientWidth;
@@ -21,45 +22,53 @@ const HeaderCard = () => {
           const scrollFraction = scrollLeft / maxScrollLeft;
           setScrollProgress(scrollFraction * 100);
 
-          const visibleItemIndex = Math.min(
-            Math.floor((scrollLeft / maxScrollLeft) * (totalItems - 1)),
+          // Calculate index with better precision
+          const index = Math.min(
+            Math.floor((scrollLeft / clientWidth) + 0.5),
             totalItems - 1
           );
-          setCurrentItemIndex(visibleItemIndex);
+          setCurrentItemIndex(index);
         }
       }
     };
 
-    const carouselElement = carouselRef.current;
-    const handleResize = () => handleScroll();
+    const handleResize = () => updateIndex();
 
-    const handleImageLoad = () => {
-      handleScroll(); 
-    };
+    const autoScroll = setInterval(() => {
+      if (carouselRef.current) {
+        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+        const itemWidth = clientWidth; // Width of each carousel item
 
-    if (carouselElement) {
-      carouselElement.addEventListener("scroll", handleScroll);
-      window.addEventListener("resize", handleResize);
+        // Check if we are at the last item
+        if (scrollLeft + itemWidth >= scrollWidth - 1) {
+          // Scroll back to the first item immediately
+          carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
+          setCurrentItemIndex(0); // Reset the current item index to 0 (first item)
+        } else {
+          // Scroll to the next item
+          const nextScrollPosition = Math.min(scrollLeft + itemWidth, scrollWidth - clientWidth);
+          carouselRef.current.scrollTo({ left: nextScrollPosition, behavior: "smooth" });
 
-      const images = carouselElement.querySelectorAll("img");
-      images.forEach((img) => img.addEventListener("load", handleImageLoad));
-    }
+          // Update current item index
+          setCurrentItemIndex((prevIndex) => (prevIndex + 1) % totalItems);
+        }
+      }
+    }, scrollInterval);
 
-    // Initial scroll calculation
-    handleScroll();
+    // Add event listeners
+    window.addEventListener("resize", handleResize);
+    updateIndex(); // Initial update
 
     return () => {
-      if (carouselElement) {
-        carouselElement.removeEventListener("scroll", handleScroll);
-        window.removeEventListener("resize", handleResize);
-      }
+      window.removeEventListener("resize", handleResize);
+      clearInterval(autoScroll); // Clear interval on unmount
     };
   }, [totalItems]);
 
   return (
     <>
       {/* Highlight section */}
-      <div className="flex items-center justify-between w-full relative mb-4">
+      <div className="flex items-center justify-between w-full relative mb-4 mt-16">
         <span className="text-sm font-medium text-white">
           {String(currentItemIndex + 1).padStart(2, '0')}
         </span>

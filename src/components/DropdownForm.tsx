@@ -1,8 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 
 const DropdownForm = () => {
 
-  const bookcallurl =  process.env.NEXT_PUBLIC_BOOKACALL
+  const bookcallurl = process.env.NEXT_PUBLIC_BOOKACALL
 
   // State to hold form data
   const [formData, setFormData] = useState({
@@ -74,13 +74,12 @@ const DropdownForm = () => {
       },
       body: JSON.stringify(formattedData),
     })
-    .then(response => response.json())
-    .then(data => console.log('Success:', data))
-    .catch((error) => {
-      console.error('Error:', error);
-    });
+      .then(response => response.json())
+      .then(data => console.log('Success:', data))
+      .catch((error) => {
+        console.error('Error:', error);
+      });
 
-    // Clear form
     setFormData({
       firstName: '',
       lastName: '',
@@ -93,14 +92,14 @@ const DropdownForm = () => {
   };
 
   return (
-    <form 
-      className="absolute mt-4 bg-gray-100 p-6 rounded-md shadow-md left-0 w-[343px] btn_white"
+    <form
+      className="absolute mt-2 left-0 md:left-auto md:right-0 bg-gray-100 p-6 rounded-md shadow-md w-[343px] btn_white"
       style={{ top: '100%' }}
       onSubmit={handleSubmit}
     >
       <div className="mb-6 flex space-x-6">
         <div className="flex-1">
-          <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="firstName" className="block text-sm font-medium text-white">
             First Name
           </label>
           <input
@@ -114,7 +113,7 @@ const DropdownForm = () => {
           />
         </div>
         <div className="flex-1">
-          <label htmlFor="lastName" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="lastName" className="block text-sm font-medium text-white">
             Last Name
           </label>
           <input
@@ -131,7 +130,7 @@ const DropdownForm = () => {
 
       <div className="mb-8 flex space-x-8">
         <div className="flex-1">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="email" className="block text-sm font-medium text-white">
             Email
           </label>
           <input
@@ -146,7 +145,7 @@ const DropdownForm = () => {
           {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
         <div className="flex-1">
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="phone" className="block text-sm font-medium text-white">
             Phone Number
           </label>
           <input
@@ -164,7 +163,7 @@ const DropdownForm = () => {
 
       <div className="mb-6 flex space-x-6">
         <div className="flex-1">
-          <label htmlFor="date" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="date" className="block text-sm font-medium text-white">
             Date
           </label>
           <input
@@ -177,7 +176,7 @@ const DropdownForm = () => {
           />
         </div>
         <div className="flex-1">
-          <label htmlFor="time" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="time" className="block text-sm font-medium text-white">
             Time
           </label>
           <input
@@ -191,7 +190,7 @@ const DropdownForm = () => {
       </div>
 
       <div className="mb-6">
-        <label htmlFor="comments" className="block text-sm font-medium text-gray-700">
+        <label htmlFor="comments" className="block text-sm font-medium text-white">
           Comments
         </label>
         <textarea

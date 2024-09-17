@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import { Headline, CardTitle, CardDescription } from "@/components/ui/WorkCard";
 import { MdArrowForward } from "react-icons/md";
 import { awardsData } from "../../constants";
-import { Award as AwardType } from "../../constants/types"; // Adjust the path as necessary
+import { Award as AwardType } from "../../constants/types";
 
 const Award = () => {
     const [selectedAward, setSelectedAward] = useState<AwardType>(awardsData[0]);
-    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); // Track hovered index
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null); 
 
     const handleAwardClick = (award: AwardType, index: number) => {
         setSelectedAward(award);
-        setHoveredIndex(null); // Reset hovered index when an award is selected
+        setHoveredIndex(null); 
     };
 
     const handleMouseEnter = (index: number) => {
-        setHoveredIndex(index); // Set hovered index on mouse enter
+        setHoveredIndex(index); 
     };
 
     const handleMouseLeave = () => {
-        setHoveredIndex(null); // Reset hovered index on mouse leave
+        setHoveredIndex(null); 
     };
 
     return (
@@ -33,7 +33,7 @@ const Award = () => {
             </div>
 
             <div className="flex flex-col lg:flex-row justify-between gap-14">
-                <div className="flex flex-col lg:w-3/5">
+                <div className="flex flex-col lg:w-3/5 ">
                     {awardsData.map((award, index) => (
                         <div
                             key={index}
@@ -64,10 +64,10 @@ const Award = () => {
                     ))}
                 </div>
 
-                <div className="flex flex-col lg:w-1/2 mt-6 lg:mt-0 text-left">
-                    <div className="relative w-full h-60 overflow-hidden rounded-2xl mx-auto">
+                <div className="flex flex-col lg:w-1/2 text-left">
+                    <div className="relative w-full h-3/4 overflow-hidden rounded-2xl mx-auto">
                         <img
-                            src={selectedAward.image} // Update image based on selected award
+                            src={selectedAward.image} 
                             alt={selectedAward.title}
                             className="object-cover w-full h-full"
                         />
