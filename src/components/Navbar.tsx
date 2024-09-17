@@ -19,16 +19,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flexBetween max-w-screen-xl mx-auto px-5 lg:px-10 py-5 relative top-0 left-0 right-0 z-50 bg-gradient-to-b from-transparent to-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 flexBetween max-w-screen-xl mx-auto px-5 lg:px-10 py-5 bg-gradient-to-b from-transparent to-transparent">
       <div className="flex items-center space-x-2">
         <Link href="/">
           <img
             src="/logo.png"
             alt="CeelestialUI"
             className="rounded-2xl w-12 h-12"
-          />
+          /> 
         </Link>
-        <p className="text-[#ffffff] text-lg font-semibold">CeelestialUI</p>
+        <p className="text-[#ffffff] text-lg font-semibold mt-8 mb-8">CeelestialUI</p>
       </div>
 
       {/* Desktop Links */}
@@ -115,7 +115,6 @@ const Navbar = () => {
             </svg>
           </button>
 
-  
           <div className="flex justify-start px-4 mb-4">
             <ButtonForm title="BOOK A CALL" variant="btn_dark_green" />
           </div>
@@ -134,24 +133,7 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <div className="flex justify-center gap-4 px-4 mb-4">
-            {/* <button className="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-md hover:bg-gray-100 focus:outline-none">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                className="h-6 w-6 text-gray-800"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 7l-10 10M17 7H6.5M17 7v10"
-                />
-              </svg>
-            </button> */}
-          </div>
+          <div className="flex justify-center gap-4 px-4 mb-4"></div>
         </div>
       )}
     </nav>
