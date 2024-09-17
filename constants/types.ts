@@ -19,17 +19,17 @@ product: {
 };
 }
 
-export interface Review {
-  user: string;
-  rating: number;
-  comment: string;
-}
+// export interface Review {
+//   user: string;
+//   rating: number;
+//   comment: string;
+// }
 
-export interface Specifications {
-  dimensions: string;
-  weight: string;
-  materials: string;
-}
+// export interface Specifications {
+//   dimensions: string;
+//   weight: string;
+//   materials: string;
+// }
 
 export interface Product {
   id: number;
