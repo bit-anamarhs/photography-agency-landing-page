@@ -49,8 +49,8 @@ const MobileExpertise = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute -bottom-2 transform -translate-y-1 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
-            <CarouselNext className="absolute  -bottom-2 transform -translate-y-1 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
+            <CarouselPrevious className="absolute -bottom-2 transform -translate-y-1 mt-4 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
+            <CarouselNext className="absolute  -bottom-2 transform -translate-y-1 mt-4 text-white bg-gray-700 p-3 rounded-full shadow-lg z-10" />
           </Carousel>
         </div>
       </div>
