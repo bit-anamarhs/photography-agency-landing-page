@@ -10,7 +10,7 @@ const HeaderCard = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const totalItems = carouselData.length;
-  const scrollInterval = 5000; // Increase to 5 seconds for better visibility
+  const scrollInterval = 5000; 
 
   useEffect(() => {
     const updateIndex = () => {
@@ -37,23 +37,34 @@ const HeaderCard = () => {
     const autoScroll = setInterval(() => {
       if (carouselRef.current) {
         const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        const itemWidth = clientWidth; // Width of each carousel item
-
+    
+        // Ensure .carousel-item exists before trying to access its width
+        const carouselItem = carouselRef.current.querySelector(".carousel-item") as HTMLElement;
+        if (!carouselItem) return; // If not found, exit early
+    
+        // Get the width of the carousel item including its margin (using getComputedStyle)
+        const carouselItemStyle = window.getComputedStyle(carouselItem);
+        const itemMarginRight = parseInt(carouselItemStyle.marginRight, 10); // Get margin-right value
+        const itemWidth = carouselItem.offsetWidth + itemMarginRight; // Add margin to the width
+    
         // Check if we are at the last item
-        if (scrollLeft + itemWidth >= scrollWidth - 1) {
-          // Scroll back to the first item immediately
-          carouselRef.current.scrollTo({ left: 0, behavior: "smooth" });
+        if (scrollLeft + clientWidth >= scrollWidth - 1) {
+          const resetPosition = Math.max(scrollLeft - clientWidth, 0); // Adjust scroll back
+          carouselRef.current.scrollTo({ left: resetPosition, behavior: "smooth" });
           setCurrentItemIndex(0); // Reset the current item index to 0 (first item)
         } else {
           // Scroll to the next item
           const nextScrollPosition = Math.min(scrollLeft + itemWidth, scrollWidth - clientWidth);
           carouselRef.current.scrollTo({ left: nextScrollPosition, behavior: "smooth" });
-
+    
           // Update current item index
           setCurrentItemIndex((prevIndex) => (prevIndex + 1) % totalItems);
         }
       }
     }, scrollInterval);
+    
+    
+    
 
     // Add event listeners
     window.addEventListener("resize", handleResize);
@@ -61,7 +72,7 @@ const HeaderCard = () => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      clearInterval(autoScroll); // Clear interval on unmount
+      clearInterval(autoScroll); 
     };
   }, [totalItems]);
 
