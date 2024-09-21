@@ -59,12 +59,12 @@ const Expertise = () => {
                         key={index}
                         className="flex justify-center items-center mt-10"
                       >
-                        <div className="p-0">
-                          <Card className="w-[90%] h-[46vw] mx-1 ms-14">
+                        <div className="p-0 ">
+                          <Card className="w-[90%] h-[44vw] mx-auto">
                             <CardContent className="flex items-center justify-center p-0">
                               <img
                                 src={data}
-                                className="w-full h-full object-cover rounded-xl carousel-image"
+                                className="w-full h-full max-h-[44vw] object-cover rounded-xl carousel-image"
                                 alt={`Expertise ${index}`}
                               />
                             </CardContent>
@@ -73,8 +73,8 @@ const Expertise = () => {
                       </CarouselItem>
                     ))}
                   </CarouselContent>
-                  <CarouselPrevious className="relative transform -translate-y-1/2 translate-x-14 h-10 w-10 text-white bg-gray-700 p-2 rounded-full" />
-                  <CarouselNext className="relative transform -translate-y-1/2 translate-x-10 h-10 w-10 text-white bg-gray-700 p-2 rounded-full" />
+                  <CarouselPrevious className="relative transform -translate-y-4 mt-2 translate-x-14 h-10 w-10 text-white bg-gray-700 p-2 rounded-full" />
+                  <CarouselNext className="relative transform -translate-y-4 mt-2 translate-x-10 h-10 w-10 text-white bg-gray-700 p-2 rounded-full" />
                 </Carousel>
               </div>
             </div>
